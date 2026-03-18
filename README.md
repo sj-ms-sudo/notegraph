@@ -1,40 +1,53 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#Notegraph
+ A minimal note viewer built with Next.js featuring a sidebar-driven navigation system.
 
-## Getting Started
+##preview
+  <img width="1345" height="995" alt="image" src="https://github.com/user-attachments/assets/2186f345-f50f-4cc9-b0f0-c664ea2973b2" />
+## Features (v0)
+- Sidebar navigation
+- Query-based note selection
+- Dynamic content rendering
+- Basic layout with Navbar, Sidebar, Body
 
-First, run the development server:
+## Tech Stack
+- Next.js (App Router)
+- React
+- Tailwind CSS
+
+  ## Getting Started
 
 ```bash
+git clone <repo-url>
+cd notegraph
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 6. Project Structure (very useful for devs)
+```md
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/app
+  /components
+    sidebar.tsx
+    body.tsx
+    navbar.tsx
+  page.tsx
+/data
+  notes.js
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Limitations (v0)
+- Uses query params instead of dynamic routing
+- No active state in sidebar
+- Basic UI (no responsiveness yet)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
+- [ ] Switch to dynamic routes (/notes/[slug])
+- [ ] Add active sidebar state
+- [ ] Improve UI/UX
+- [ ] Add markdown support for notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# notegraph
->>>>>>> 4bbf90146af39550c371783f0e2c1365a4fe2f5e
+## Versions
+- v0: Basic functionality with sidebar + query params
