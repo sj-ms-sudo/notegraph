@@ -195,5 +195,77 @@ Why structure matters:
 - Improves readability
 - Helps teams collaborate
     `
-  }
+  },
+  {
+  slug: "nextjs-params-and-query",
+  title: "Params and Query in Next.js",
+  content: `
+Next.js supports dynamic routing and query parameters.
+
+Dynamic Params (Route Params):
+
+Defined using folder names:
+
+app/note/[slug]/page.tsx
+
+Access params:
+
+export default function Page({ params }) {
+  console.log(params.slug)
+}
+
+Example:
+URL: /note/react
+→ params.slug = "react"
+
+
+Query Parameters:
+
+Passed in URL like:
+
+/note/react?tab=code
+
+Access in client components:
+
+"use client"
+import { useSearchParams } from "next/navigation"
+
+const searchParams = useSearchParams()
+const tab = searchParams.get("tab")
+
+→ tab = "code"
+
+
+Navigation with params:
+
+<Link href="/note/react">Open</Link>
+
+Navigation with query:
+
+<Link href="/note/react?tab=code">Open Code Tab</Link>
+
+
+Key difference:
+
+Params:
+- part of route structure
+- required for page
+
+Query:
+- optional
+- used for filters, UI state
+
+
+Use cases:
+
+Params:
+- blog slug
+- product id
+
+Query:
+- search filters
+- tabs
+- sorting
+  `
+}
 ]
